@@ -11,6 +11,6 @@
 ***Пример сборки и запуска***
 
 ```
-docker build -t gptbot .
-docker run -d gptbot
+docker build -t sshmachinebot .
+docker run -d sshmachinebot
 ```
