@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
@@ -14,7 +15,11 @@ const (
 )
 
 func main() {
-	botToken := "token"
+
+	botToken := os.Getenv("TOKEN")
+	if botToken == "" {
+		log.Fatalf("bot token not set")
+	}
 
 	bot, err := tgbotapi.NewBotAPI(botToken)
 	if err != nil {
