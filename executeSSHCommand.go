@@ -7,7 +7,7 @@ import (
 	"golang.org/x/crypto/ssh"
 )
 
-func executeSSHCommand(command string) (string, error) {
+func executeSSHCommand(sshHost string, sshUser string, sshPassword string, command string) (string, error) {
 	config := &ssh.ClientConfig{
 		User: sshUser,
 		Auth: []ssh.AuthMethod{
