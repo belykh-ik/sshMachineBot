@@ -12,7 +12,7 @@ func main() {
 
 	botToken := os.Getenv("TOKEN")
 	if botToken == "" {
-		log.Fatalf("bot token not set")
+		log.Fatalf("BOT TOKEN not set")
 	}
 
 	bot, err := tgbotapi.NewBotAPI(botToken)
